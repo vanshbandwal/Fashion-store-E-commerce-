@@ -1,0 +1,7 @@
+.wishlist_container{
+    padding-top: 150px;
+    margin: 20px 20px;
+    display: grid;
+    row-gap: 80px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
