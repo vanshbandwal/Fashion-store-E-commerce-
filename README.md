@@ -25,4 +25,4 @@ Backend: Node.js, Express.js
 
 Database: MongoDB
 
-API Calls: Axios 
+API Calls: fetch function
