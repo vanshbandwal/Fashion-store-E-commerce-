@@ -5,13 +5,13 @@ const ListProduct = () => {
   const [allproduct, setAllproduct] = useState([])
 
   const fetchInfo = async () => {
-    await fetch('http://localhost:4000/allproducts').then((res) => res.json()).then((data) => { setAllproduct(data) })
+    await fetch('https://fashion-store-e-commerce-one.vercel.app/allproducts').then((res) => res.json()).then((data) => { setAllproduct(data) })
   }
   useEffect(() => {
     fetchInfo();
   }, [])
   const remove_product = async(id)=>{
-    await fetch('http://localhost:4000/removeproduct',{
+    await fetch('https://fashion-store-e-commerce-one.vercel.app/removeproduct',{
       method:'POST',
       headers:{
         Accept:'application/json',
