@@ -32,10 +32,10 @@
         const [all_product,setAll_Product] = useState([])
 
         useEffect(()=>{
-            fetch('http://localhost:4000/allproducts').then((response)=>response.json()).then((data)=>setAll_Product(data))
+            fetch('fashion-store-e-commerce-one.vercel.app/allproducts').then((response)=>response.json()).then((data)=>setAll_Product(data))
 
             if(localStorage.getItem('auth-token')){
-                fetch('http://localhost:4000/getcart',{
+                fetch('fashion-store-e-commerce-one.vercel.app/getcart',{
                     method:'POST',
                     headers:{
                        Accept:'application/form-data',
@@ -52,7 +52,7 @@
         const addToCart = (itemId) => {
             setCartItem((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
             if(localStorage.getItem('auth-token')){
-                fetch('http://localhost:4000/addtocart',{
+                fetch('fashion-store-e-commerce-one.vercel.app/addtocart',{
                     method:'POST',
                     headers:{
                         Accept:'application/form-data',
@@ -76,7 +76,7 @@
         const removeToCart = (itemId) => {
             setCartItem((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
          if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/removefromcart',{
+            fetch('fashion-store-e-commerce-one.vercel.app/removefromcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
