@@ -9,7 +9,13 @@ const cors = require('cors')
          
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors())
+app.use(cors(
+         {
+                  origin: ["https://deploy-mern-1wha.vercel.app"],
+                  methods: ["POST", "GET"],
+                  credentials:true
+         }
+))
 
 //db connection
 const mongodb_url = "mongodb+srv://vanshbandwal93:vansh123@cluster0.tq0jneo.mongodb.net/Ecommerce01" 
