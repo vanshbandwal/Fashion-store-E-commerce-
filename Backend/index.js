@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors(
          {
-                  origin: ["https://deploy-mern-1wha.vercel.app"],
+                  origin: [""],
                   methods: ["POST", "GET"],
                   credentials:true
          }
