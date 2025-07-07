@@ -6,7 +6,7 @@ import Item from '../Item/Item'
 const Popular = () => {
   const [data_product,setData_product] = useState([])
  useEffect(()=>{
-  fetch('http://localhost:4000/popularinwomen').then((data)=>data.json()).then((data)=>setData_product(data))
+  fetch('fashion-store-e-commerce-one.vercel.app/popularinwomen').then((data)=>data.json()).then((data)=>setData_product(data))
  },[])
   return (
     <div className='popular'>
